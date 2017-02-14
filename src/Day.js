@@ -13,9 +13,9 @@ export default class Day extends React.Component {
   render() {
     if (!isSameDay(this.props.currentMessage, this.props.previousMessage)) {
       return (
-        <View style={[styles.container, this.props.containerStyle]}>
-          <View style={[styles.wrapper, this.props.wrapperStyle]}>
-            <Text style={[styles.text, this.props.textStyle]}>
+        <View style={[styles.container, this.props.containerDayStyle]}>
+          <View style={[styles.wrapper, this.props.wrapperDayStyle]}>
+            <Text style={[styles.text, this.props.textDayStyle]}>
               {moment(this.props.currentMessage.createdAt).locale(this.context.getLocale()).format('ll').toUpperCase()}
             </Text>
           </View>
